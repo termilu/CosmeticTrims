@@ -1,0 +1,38 @@
+{
+	"schemaVersion": 1,
+	"id": "cosmetictrims",
+	"version": "${version}",
+	"name": "Cosmetic Trims",
+	"description": "A minecraft mod that adds custom cosmetic trims!",
+	"authors": [
+		"termilu"
+	],
+	"contact": {
+		"homepage": "https://github.com/termilu/CosmeticTrims",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/cosmetictrims/icon.png",
+	"environment": "server",
+	"entrypoints": {
+		"main": [
+			"com.termilu.cosmetictrims.CosmeticTrims"
+		],
+		"fabric-datagen": [
+			"com.termilu.cosmetictrims.CosmeticTrimsDataGenerator"
+		],
+		"client": [
+			"com.termilu.cosmetictrims.CosmeticTrimsModClient"
+		]
+	},
+	"mixins": [
+		"cosmetictrims.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.16.14",
+		"minecraft": "1.21.5",
+		"java": ">=21",
+		"fabric-api": "*",
+		"polymer-core": ">=0.12.4"
+	}
+}
