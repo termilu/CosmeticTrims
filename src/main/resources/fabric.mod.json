@@ -1,7 +1,7 @@
 {
 	"schemaVersion": 1,
 	"id": "cosmetictrims",
-	"version": "${version}",
+	"version": "0.0.1",
 	"name": "Cosmetic Trims",
 	"description": "A minecraft mod that adds custom cosmetic trims!",
 	"authors": [
@@ -13,7 +13,7 @@
 	},
 	"license": "MIT",
 	"icon": "assets/cosmetictrims/icon.png",
-	"environment": "server",
+	"environment": "*",
 	"entrypoints": {
 		"main": [
 			"com.termilu.cosmetictrims.CosmeticTrims"
