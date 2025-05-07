@@ -19,7 +19,7 @@ public class ModItemGroups {
 //            .icon(() -> new ItemStack(ModItems.CHEF_HAT))
 //            .build();
 
-    public static final ItemGroup COSMETIC_TRIMS_GROUP2 = Registry.register(Registries.ITEM_GROUP,
+    public static final ItemGroup COSMETIC_TRIMS_GROUP = Registry.register(Registries.ITEM_GROUP,
             Identifier.of(CosmeticTrims.MOD_ID, "cosmetic_trims"),
             // Build display name of the item group
             FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cosmetictrims"))
@@ -34,5 +34,6 @@ public class ModItemGroups {
 
     public static void registerItemGroups() {
         CosmeticTrims.LOGGER.info("Registering Mod Item Groups for " + CosmeticTrims.MOD_ID);
+        // Register the item group
     }
 }
