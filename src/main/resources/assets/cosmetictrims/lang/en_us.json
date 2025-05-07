@@ -1,0 +1,10 @@
+{
+  "_comment": "https://minecraft.wiki/w/Formatting_codes",
+
+  "item.cosmetictrims.chef_hat": "Chef Hat",
+
+  "itemgroup.cosmetictrims":  "Cosmetic Trims",
+
+  "tooltip.cosmetictrims.general.tooltip.shift": "Press §eShift§r for more Information",
+  "tooltip.cosmetictrims.chef_hat.tooltip.1": "§5Custom§r Chef Hat"
+}
