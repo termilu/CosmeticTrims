@@ -52,4 +52,5 @@ public class ModItems {
         // Register the item group
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::customIngredients);
     }
+
 }
