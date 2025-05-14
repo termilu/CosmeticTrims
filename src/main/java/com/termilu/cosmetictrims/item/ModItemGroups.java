@@ -4,8 +4,10 @@ import com.termilu.cosmetictrims.CosmeticTrims;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
 import net.minecraft.text.Text;
 import net.minecraft.util.Identifier;
 
@@ -19,21 +21,30 @@ public class ModItemGroups {
 //            .icon(() -> new ItemStack(ModItems.CHEF_HAT))
 //            .build();
 
-    public static final ItemGroup COSMETIC_TRIMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-            Identifier.of(CosmeticTrims.MOD_ID, "cosmetic_trims"),
-            // Build display name of the item group
-            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cosmetictrims"))
-                    // Build Icon of the item group
-                    .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
-                        entries.add(new ItemStack(ModItems.CHEF_HAT));
+//    public static final ItemGroup COSMETIC_TRIMS_GROUP = Registry.register(Registries.ITEM_GROUP,
+//            Identifier.of(CosmeticTrims.MOD_ID, "cosmetic_trims"),
+//            // Build display name of the item group
+//            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cosmetictrims"))
+//                    // Build Icon of the item group
+//                    .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
+//                        entries.add(new ItemStack(ModItems.CHEF_HAT));
+//                        entries.add(new ItemStack(Items.ACACIA_LOG));
+//
+//
+//                    })
+//                    .build());
 
-
-                    })
-                    .build());
-
+    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(CosmeticTrims.MOD_ID, "item_group"));
+    public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+            .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
+                entries.add(new ItemStack(ModItems.CHEF_HAT));
+            })
+            .displayName(Text.translatable("itemgroup.cosmetictrims"))
+            .build();
 
     public static void registerItemGroups() {
         CosmeticTrims.LOGGER.info("Registering Mod Item Groups for " + CosmeticTrims.MOD_ID);
         // Register the item group
+
     }
 }
