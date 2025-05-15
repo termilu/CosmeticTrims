@@ -15,23 +15,12 @@ public class ModItemGroups {
     // For example, you can create a custom item group for the mod's items
     // and add items to it using the FabricItemGroupBuilder class
 
+//    // 1.21.1 way of registering item groups
 //    public static final ItemGroup COSMETIC_TRIMS_GROUP = FabricItemGroupBuilder.create(
 //            Identifier.of(CosmeticTrims.MOD_ID, "cosmetic_trims"))
 //            .icon(() -> new ItemStack(ModItems.CHEF_HAT))
 //            .build();
 
-//    public static final ItemGroup COSMETIC_TRIMS_GROUP = Registry.register(Registries.ITEM_GROUP,
-//            Identifier.of(CosmeticTrims.MOD_ID, "cosmetic_trims"),
-//            // Build display name of the item group
-//            FabricItemGroup.builder().displayName(Text.translatable("itemgroup.cosmetictrims"))
-//                    // Build Icon of the item group
-//                    .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
-//                        entries.add(new ItemStack(ModItems.CHEF_HAT));
-//                        entries.add(new ItemStack(Items.ACACIA_LOG));
-//
-//
-//                    })
-//                    .build());
 
     public static final RegistryKey<ItemGroup> COSMETIC_TRIMS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(CosmeticTrims.MOD_ID, "itemgroup.cosmetictrims"));
     public static final ItemGroup COSMETIC_TRIMS_GROUP = FabricItemGroup.builder()
