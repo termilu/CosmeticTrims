@@ -4,7 +4,6 @@ import com.termilu.cosmetictrims.CosmeticTrims;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
-import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -34,8 +33,8 @@ public class ModItemGroups {
 //                    })
 //                    .build());
 
-    public static final RegistryKey<ItemGroup> CUSTOM_ITEM_GROUP_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(CosmeticTrims.MOD_ID, "item_group"));
-    public static final ItemGroup CUSTOM_ITEM_GROUP = FabricItemGroup.builder()
+    public static final RegistryKey<ItemGroup> COSMETIC_TRIMS_KEY = RegistryKey.of(Registries.ITEM_GROUP.getKey(), Identifier.of(CosmeticTrims.MOD_ID, "itemgroup.cosmetictrims"));
+    public static final ItemGroup COSMETIC_TRIMS_GROUP = FabricItemGroup.builder()
             .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
                 entries.add(new ItemStack(ModItems.CHEF_HAT));
             })
@@ -45,6 +44,8 @@ public class ModItemGroups {
     public static void registerItemGroups() {
         CosmeticTrims.LOGGER.info("Registering Mod Item Groups for " + CosmeticTrims.MOD_ID);
         // Register the item group
+
+        Registry.register(Registries.ITEM_GROUP, COSMETIC_TRIMS_KEY, COSMETIC_TRIMS_GROUP);
 
     }
 }
