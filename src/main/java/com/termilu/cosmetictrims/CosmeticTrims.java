@@ -1,5 +1,6 @@
 package com.termilu.cosmetictrims;
 
+import com.termilu.cosmetictrims.item.ModItemGroups;
 import com.termilu.cosmetictrims.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
@@ -16,6 +17,7 @@ public class CosmeticTrims implements ModInitializer {
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
 		ModItems.registerModItems();
+		ModItemGroups.registerItemGroups();
 
 
 	}
