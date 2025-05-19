@@ -2,7 +2,6 @@ package com.termilu.cosmetictrims.item;
 
 import com.termilu.cosmetictrims.CosmeticTrims;
 import eu.pb4.polymer.core.api.item.PolymerItem;
-import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
