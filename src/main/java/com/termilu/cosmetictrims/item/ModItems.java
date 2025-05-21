@@ -1,10 +1,12 @@
 package com.termilu.cosmetictrims.item;
 
 import com.termilu.cosmetictrims.CosmeticTrims;
+import eu.pb4.polymer.core.api.item.SimplePolymerItem;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroupEntries;
 import net.fabricmc.fabric.api.itemgroup.v1.ItemGroupEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroups;
+import net.minecraft.item.Items;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.registry.RegistryKey;
@@ -26,7 +28,13 @@ public class ModItems {
     // 1.21.5 way of registering items
     public static final Item CHEF_HAT2 = registerItem("chef_hat2", Item::new, new Item.Settings());
 
-    public static final Item CHEF_HAT = registerItem("chef_hat", PolymerBackedItem::new, new Item.Settings());
+    //public static final Item CHEF_HAT = registerItem("chef_hat", PolymerBackedItem::new, new Item.Settings());
+
+    //public static final Item CHEF_HAT = registerItem("chef_hat", SimplePolymerItem::new, new Item.Settings());
+
+    public static final Item CHEF_HAT = registerItem("chef_hat", settings ->
+                    new SimplePolymerItem(settings, Items.LEATHER_HELMET, true),
+            new Item.Settings());
 
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
