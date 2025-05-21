@@ -33,7 +33,7 @@ public class ModItems {
     //public static final Item CHEF_HAT = registerItem("chef_hat", SimplePolymerItem::new, new Item.Settings());
 
     public static final Item CHEF_HAT = registerItem("chef_hat", settings ->
-                    new SimplePolymerItem(settings, Items.LEATHER_HELMET, true),
+                    new SimplePolymerItem(settings, Items.EMERALD, true),
             new Item.Settings());
 
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
