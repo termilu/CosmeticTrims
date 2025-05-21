@@ -4,6 +4,9 @@
   "item.cosmetictrims.chef_hat": "Chef Hat",
   "item.cosmetictrims.chef_hat2": "Chef Hat 2",
 
+  "item.cosmetictrims.chef_hat_trim": "Chef Hat Armor Trim",
+  "trim_material.cosmetictrims.chef_hat":"test",
+
   "itemgroup.cosmetictrims":  "Cosmetic Trims",
 
   "tooltip.cosmetictrims.general.tooltip.shift": "Press §eShift§r for more Information",

@@ -27,6 +27,7 @@ public class ModItemGroups {
             .icon(() -> new ItemStack(ModItems.CHEF_HAT)).entries((displayContext, entries) -> {
                 entries.add(new ItemStack(ModItems.CHEF_HAT));
                 entries.add(new ItemStack(ModItems.CHEF_HAT2));
+                entries.add(new ItemStack(ModItems.CHEF_HAT_TRIM));
             })
             .displayName(Text.translatable("itemgroup.cosmetictrims"))
             .build();

@@ -1,0 +1,11 @@
+{
+  "asset_name": "chef_hat_trim",
+  "ingredient": {
+    "item": "cosmetictrims:chef_hat_trim"
+  },
+  "item_model_index": 0.1,
+  "override_armor_material": "leather",
+  "description": {
+    "translate": "trim_material.cosmetictrims.chef_hat"
+  }
+}

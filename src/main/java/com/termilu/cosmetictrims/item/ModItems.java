@@ -34,6 +34,9 @@ public class ModItems {
                     new SimplePolymerItem(settings, Items.LEATHER_HELMET, true),
             new Item.Settings());
 
+    public static final Item CHEF_HAT_TRIM = registerItem("chef_hat_trim", settings ->
+                    new SimplePolymerItem(settings, Items.LEATHER_HELMET, true),
+            new Item.Settings().maxCount(1));
 
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
