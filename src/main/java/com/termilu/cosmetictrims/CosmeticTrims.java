@@ -2,6 +2,7 @@ package com.termilu.cosmetictrims;
 
 import com.termilu.cosmetictrims.item.ModItemGroups;
 import com.termilu.cosmetictrims.item.ModItems;
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -16,9 +17,16 @@ public class CosmeticTrims implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("Hello Fabric world!");
+
+		// Register mod's resource folder with Polymer
+		if (!PolymerResourcePackUtils.addModAssets(MOD_ID)) {
+			System.out.println(MOD_ID + " Failed to add mod assets to Polymer RP.");
+		}else {
+			System.out.println(MOD_ID + " Successfully added mod assets to Polymer RP.");
+		}
+
 		ModItems.registerModItems();
 		ModItemGroups.registerItemGroups();
-
 
 	}
 }
