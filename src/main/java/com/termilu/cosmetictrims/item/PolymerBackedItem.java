@@ -17,7 +17,7 @@ public class PolymerBackedItem extends Item implements PolymerItem {
     // Spoofs the item visually to a leather helmet
     @Override
     public Item getPolymerItem(ItemStack stack, PacketContext context) {
-        return Items.LEATHER_HELMET;
+        return Items.EMERALD;
     }
 
     // Tells Polymer to use custom model for the item

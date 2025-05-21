@@ -28,13 +28,12 @@ public class ModItems {
     // 1.21.5 way of registering items
     public static final Item CHEF_HAT2 = registerItem("chef_hat2", Item::new, new Item.Settings());
 
-    //public static final Item CHEF_HAT = registerItem("chef_hat", PolymerBackedItem::new, new Item.Settings());
-
-    //public static final Item CHEF_HAT = registerItem("chef_hat", SimplePolymerItem::new, new Item.Settings());
+//    public static final Item CHEF_HAT = registerItem("chef_hat", PolymerBackedItem::new, new Item.Settings());
 
     public static final Item CHEF_HAT = registerItem("chef_hat", settings ->
-                    new SimplePolymerItem(settings, Items.EMERALD, true),
+                    new SimplePolymerItem(settings, Items.LEATHER_HELMET, true),
             new Item.Settings());
+
 
     public static Item registerItem(String name, Function<Item.Settings, Item> itemFactory, Item.Settings settings) {
         // Create the item key.
